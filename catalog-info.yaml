@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ktdausff7-nodejs-gitops
+  description: This is GitOps manifest for ktdausff7-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: ktdausff7-nodejs
+    janus-idp.io/tekton: ktdausff7-nodejs 
+    backstage.io/kubernetes-id: ktdausff7-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ktdausff7-nodejs
